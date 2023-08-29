@@ -2,3 +2,4 @@ net-tools
 nmap
 dnsutils
 whois
+git
