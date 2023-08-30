@@ -1,5 +1,7 @@
+wget
 net-tools
 nmap
 dnsutils
 whois
 git
+vim
