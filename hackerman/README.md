@@ -10,14 +10,14 @@ Nye verktøy kan legges til i packages.txt
 legg til nye verktøy som du vil ha på startup av en ny docker container her.
 
 ## Bygge docker image
-
+``` shell
 sudo docker build -t imagenavn .
-
+```
 - Bygger ett nytt image fra scratch
 Se alle docker images: sudo docker image ls
 
 ## Kjøre docker container
-
+``` shell
 sudo docker run -it --rm imagenavn
-
+```
 kjører en docker-container som fjerner seg selv når man detatcher
