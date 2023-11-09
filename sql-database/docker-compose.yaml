@@ -13,9 +13,9 @@ services:
     image: mariadb:lts
     restart: always
     environment:
-      - MARIADB_ROOT_PASSWORD=test123
-      - MARIADB_USER=bk
-      - MARIADB_PASSWORD temp123
+      - MARIADB_ROOT_PASSWORD=
+      - MARIADB_USER=
+      - MARIADB_PASSWORD=
     ports:
       - "3306:3306"
     volumes:
