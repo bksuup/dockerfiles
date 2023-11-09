@@ -9,4 +9,4 @@ RUN cat bashrc >> /root/.bashrc
 
 # Henter alle pakkene som ligger i packages.txt og installerer dem på i containeren
 COPY packages.txt packages
-RUN dnf install $(cat packages) -y
+RUN dnf install --allowerasing $(cat packages) -y

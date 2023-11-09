@@ -1,0 +1,4 @@
+gdb
+man-db
+man
+man-pages

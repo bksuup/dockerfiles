@@ -1,0 +1,35 @@
+version: "3.8"
+
+volumes:
+  mariadb:
+    driver: local
+
+networks:
+  db:
+    driver: bridge
+
+services:
+  mariadb:
+    image: mariadb:lts
+    restart: always
+    environment:
+      - MARIADB_ROOT_PASSWORD=test123
+      - MARIADB_USER=bk
+      - MARIADB_PASSWORD temp123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb:/var/lib/mariadb
+    networks:
+      - db
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+    - PMA_HOST=mariadb
+    - PMA_PORT=3306
+    networks:
+      - db
